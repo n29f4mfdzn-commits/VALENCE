@@ -3,278 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b101d">
-  <meta name="color-scheme" content="dark">
-  <title>VALENCE - Streetwear</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-  
+  <title>VALENCE - Store</title>
   <style>
-    :root {
-      --bg-dark: #0b101d;
-      --card-bg: #121829;
-      --accent-blue: #2563eb;
-      --accent-red: #dc2626;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border-color: #1e293b;
-    }
-
-    * {
-      box-sizing: border-box;
+    body {
+      background-color: #0b101d;
+      color: #f8fafc;
+      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      padding: 20px;
     }
-
-    html, body {
-      background-color: var(--bg-dark) !important;
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
     header {
-      padding: 20px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--border-color);
-      background: rgba(11, 16, 29, 0.85);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #1e293b;
     }
-
-    .brand-logo {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 4px;
-      color: var(--text-main);
-      text-transform: uppercase;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .brand-logo::after {
-      content: '';
-      width: 6px;
-      height: 6px;
-      background-color: var(--accent-red);
-      border-radius: 50%;
-    }
-
-    nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 14px;
-      margin-right: 16px;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--accent-blue);
-    }
-
-    .hero {
-      padding: 60px 24px 40px 24px;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      padding: 6px 16px;
-      background: rgba(37, 99, 235, 0.1);
-      border: 1px solid rgba(37, 99, 235, 0.3);
-      color: #60a5fa;
-      border-radius: 20px;
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 14px;
-      line-height: 1.2;
-    }
-
-    .hero p {
-      color: var(--text-muted);
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    .section-title {
-      max-width: 1100px;
-      margin: 40px auto 20px auto;
-      padding: 0 24px;
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-right: 4px solid var(--accent-blue);
-    }
-
-    .grid-container {
-      max-width: 1100px;
-      margin: 0 auto 40px auto;
-      padding: 0 24px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      width: 100%;
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 24px;
-      transition: transform 0.2s, border-color 0.2s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(37, 99, 235, 0.4);
-    }
-
-    .card-tag {
-      font-size: 11px;
-      color: var(--accent-red);
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .card h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: var(--text-muted);
-      font-size: 14px;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-
-    .btn {
-      display: inline-block;
-      width: 100%;
-      padding: 12px;
-      background-color: var(--accent-blue);
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
       color: #ffffff;
+    }
+    .logo::after {
+      content: '.';
+      color: #dc2626;
+    }
+    .section-title {
+      font-size: 20px;
+      margin: 30px 0 15px 0;
+      color: #60a5fa;
+      border-right: 4px solid #2563eb;
+      padding-right: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: #121829;
+      border: 1px solid #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .btn {
+      display: block;
+      background: #2563eb;
+      color: #fff;
       text-align: center;
+      padding: 10px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      border-radius: 8px;
-      transition: background-color 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #1d4ed8;
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 32px 24px;
-      text-align: center;
-      border-top: 1px solid var(--border-color);
-      color: var(--text-muted);
-      font-size: 13px;
-    }
-
-    footer span {
-      color: var(--accent-red);
+      border-radius: 6px;
+      margin-top: 15px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="#" class="brand-logo">VALENCE</a>
-    <nav>
-      <a href="#hoodies">الهوديز</a>
-      <a href="#pants">البنطلونات</a>
-    </nav>
+    <div class="logo">VALENCE</div>
   </header>
 
-  <section class="hero">
-    <div class="hero-badge">NEW COLLECTION</div>
-    <h1>VALENCE STORE</h1>
-    <p>تشكيلة مميزة من الهوديز والبنطلونات المصممة بأعلى جودة لمظهر مريح وأنيق.</p>
-  </section>
-
-  <!-- قسم الهوديز -->
-  <div class="section-title" id="hoodies">قسم الهوديز (HOODIES)</div>
-  <main class="grid-container">
+  <div class="section-title">قسم الهوديز (HOODIES)</div>
+  <div class="grid">
     <div class="card">
-      <div>
-        <div class="card-tag">HOODIE</div>
-        <h3>VALENCE Oversized Hoodie</h3>
-        <p>هودي أوفرسايز بتصميم عصري وخامة ثقيلة فائقة الراحة.</p>
-      </div>
-      <a href="#" class="btn">تصفح الهوديز</a>
+      <h3>VALENCE Oversized Hoodie</h3>
+      <p>هودي أوفرسايز بتصميم عصري لخامة ثقيلة.</p>
+      <a href="#" class="btn">تصفح الهودي</a>
     </div>
+  </div>
 
+  <div class="section-title">قسم البنطلونات (PANTS)</div>
+  <div class="grid">
     <div class="card">
-      <div>
-        <div class="card-tag">HOODIE</div>
-        <h3>VALENCE Signature Hoodie</h3>
-        <p>الإصدار الكلاسيكي بشعار VALENCE وتطريز عالي الدقة.</p>
-      </div>
-      <a href="#" class="btn">تصفح الهوديز</a>
-    </div>
-  </main>
-
-  <!-- قسم البنطلونات -->
-  <div class="section-title" id="pants">قسم البنطلونات (PANTS)</div>
-  <main class="grid-container">
-    <div class="card">
-      <div>
-        <div class="card-tag">PANTS</div>
-        <h3>VALENCE Cargo Pants</h3>
-        <p>بنطلون كارجو متعدد الجيوب بقصة مريحة وعصرية.</p>
-      </div>
+      <h3>VALENCE Cargo Pants</h3>
+      <p>بنطلون كارجو متعدد الجيوب بقصة مريحة.</p>
       <a href="#" class="btn">تصفح البنطلونات</a>
     </div>
-
-    <div class="card">
-      <div>
-        <div class="card-tag">PANTS</div>
-        <h3>VALENCE Sweatpants</h3>
-        <p>بنطلون ميلتون قطن مريح جداً للاستخدام اليومي.</p>
-      </div>
-      <a href="#" class="btn">تصفح البنطلونات</a>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 VALENCE. جميع الحقوق محفوظة <span>•</span></p>
-  </footer>
+  </div>
 
 </body>
 </html>
-
-
