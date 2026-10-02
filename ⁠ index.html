@@ -28,7 +28,7 @@
     body {
       background-color: var(--bg-dark);
       color: var(--text-main);
-      padding: 20px;
+      padding: 15px;
       min-height: 100vh;
     }
 
@@ -36,15 +36,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 20px;
+      padding: 10px 0 15px 0;
       border-bottom: 2px solid var(--border-color);
-      margin-bottom: 40px;
+      margin-bottom: 25px;
     }
 
     .logo {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       color: var(--text-main);
       cursor: pointer;
     }
@@ -56,60 +56,57 @@
     .nav-badge {
       background: var(--accent-blue);
       color: #fff;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 14px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
       font-weight: 700;
     }
 
     /* كروت الأقسام */
     .sections-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
     .category-card {
       background-color: var(--card-bg);
       border: 2px solid var(--border-color);
-      border-radius: 16px;
-      padding: 40px 20px;
+      border-radius: 12px;
+      padding: 25px 15px;
       text-align: center;
       cursor: pointer;
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 15px;
+      gap: 10px;
     }
 
-    .category-card.blue:hover {
+    .category-card.blue {
       border-color: var(--accent-blue);
-      box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
     }
 
-    .category-card.red:hover {
+    .category-card.red {
       border-color: var(--accent-red);
-      box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
     }
 
     .category-card h2 {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 900;
     }
 
     .category-card p {
       color: var(--text-muted);
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .btn-enter {
-      margin-top: 10px;
-      padding: 10px 24px;
-      border-radius: 8px;
+      margin-top: 5px;
+      padding: 8px 18px;
+      border-radius: 6px;
       font-weight: 700;
+      font-size: 14px;
       color: #fff;
     }
 
@@ -120,12 +117,12 @@
     .page-section {
       display: none;
       text-align: center;
-      padding: 60px 20px;
+      padding: 30px 10px;
     }
 
     .page-section h1 {
-      font-size: 28px;
-      margin-bottom: 15px;
+      font-size: 22px;
+      margin-bottom: 10px;
     }
 
     .page-section.blue h1 { color: var(--accent-blue); }
@@ -133,23 +130,24 @@
 
     .empty-box {
       border: 2px dashed var(--border-color);
-      border-radius: 12px;
-      padding: 50px 20px;
-      margin-top: 20px;
+      border-radius: 10px;
+      padding: 40px 15px;
+      margin-top: 15px;
       color: var(--text-muted);
-      font-size: 16px;
+      font-size: 14px;
     }
 
     .back-btn {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 20px;
       color: var(--text-main);
       background: var(--card-bg);
       border: 1px solid var(--border-color);
-      padding: 10px 20px;
-      border-radius: 8px;
+      padding: 8px 16px;
+      border-radius: 6px;
       cursor: pointer;
       font-weight: 700;
+      font-size: 13px;
     }
   </style>
 </head>
@@ -157,7 +155,7 @@
 
   <header>
     <div class="logo" onclick="showHome()">VALENCE<span>.</span></div>
-    <div class="nav-badge">OFFICIAL STORE</div>
+    <div class="nav-badge">STORE</div>
   </header>
 
   <!-- الصفحة الرئيسية: الأقسام فقط -->
@@ -187,7 +185,7 @@
     <div class="empty-box">
       قريباً.. جاري تحضير الكولكشن الجديد للهوديز 🔥
     </div>
-    <div class="back-btn" onclick="showHome()">← العودة للأقسام الرئيسيّة</div>
+    <div class="back-btn" onclick="showHome()">← العودة للأقسام الرئيسية</div>
   </div>
 
   <!-- صفحة قسم البنطلونات (فاضية) -->
@@ -196,7 +194,7 @@
     <div class="empty-box">
       قريباً.. جاري تحضير الكولكشن الجديد للبنطلونات 🔥
     </div>
-    <div class="back-btn" onclick="showHome()">← العودة للأقسام الرئيسيّة</div>
+    <div class="back-btn" onclick="showHome()">← العودة للأقسام الرئيسية</div>
   </div>
 
   <script>
